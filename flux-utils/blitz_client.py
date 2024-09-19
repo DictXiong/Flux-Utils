@@ -251,7 +251,7 @@ async def blitz_access(name, address, lock, latency, mask=0xff):
 
 async def main():
     if args.scan:
-        asyncio.run(scan())
+        await scan()
     tasks = []
     lock = asyncio.Lock()
     for index, sensor in enumerate(args.sensors):
